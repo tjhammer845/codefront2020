@@ -1,0 +1,525 @@
+/*** GENERAL/LAYOUT ***/
+body {
+    font-family: "Mallory-Book", Verdana, Arial, Helvetica, sans-serif;
+    background: #9ab6d9 url("../../assets/images/yale-bg.jpg") top center repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+section.main-section{
+    width: 100%;
+    max-width: 970px;
+    height: auto;
+    margin: 8rem 0;
+    background: #fff;
+    z-index: 3;
+    border: solid 1px #033569;
+    -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.2);
+}
+
+/* Back to Top Button */
+#BackToTop {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+      opacity .3s, visibility .3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#BackToTop::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 15px;
+    color: #fff;
+    margin-left: -10px;
+}
+#BackToTop:hover {
+    cursor: pointer;
+    background: #033469;
+    border-color: #033469;
+}
+#BackToTop.show {
+    opacity: .7;
+    visibility: visible;
+}
+
+/*** HEADER ***/
+header h1 {
+    margin: 0;
+    padding: 1.5rem 3.125rem;
+    font-family: "YaleNew", Georgia, "Times New Roman", serif;
+    font-size: 2.4rem;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+    background-color: #033569;
+    border: 1px solid #033569;
+    color: #fff;
+    z-index: 4;
+}
+
+/* Rightside Links (Footer Links in Mobile) */
+header nav.nav-bar{
+    display: flex;
+    background-color: white;
+    border-bottom: 1px #707070 solid;
+    -webkit-box-pack: end;
+    justify-content: space-between;
+}
+header nav.nav-bar ul.nav {
+    margin: 0 2rem;
+}
+header nav.nav-bar ul.nav li.nav-item a.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+}
+header nav.nav-bar ul.nav li.nav-item a.nav-link:hover,
+header nav.nav-bar ul.nav li.nav-item a.nav-link:focus {
+    text-decoration: underline;
+}
+
+/*** MAIN CONTENT ***/
+/* Page Copy and Acknowledgement */
+main.main-content {
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
+}
+
+/* Steps Indication */
+main.main-content section.steps-container {
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 0;
+    max-width: 459px;
+}
+main.main-content section.steps-container .step i {
+    font-size: 3rem;
+    color: #727373;
+    border: solid 5px #727373;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-bottom: 10px;
+}
+main.main-content section.steps-container .step-1 i {
+    width: 90px;
+}
+main.main-content section.steps-container .step div {
+    font-family: "Mallory-Medium", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #727373;
+    min-width: 126px;
+    z-index: 1;
+}
+main.main-content section.steps-container .step-1 {
+    margin-right: -25px;
+}
+main.main-content section.steps-container .step-2 {
+    margin: 0 -25px;
+}
+main.main-content section.steps-container .step-3 {
+    margin-left: -25px;
+}
+main.main-content section.steps-container hr{
+    display: inline-block;
+    max-width: 65px;
+    width: 100%;
+    border-top: 5px solid #727373;
+    padding-bottom: 10px;
+}
+
+/* Page Copy */
+main.main-content h2.form-header{
+    font-family: "Mallory-Medium", Verdana, Arial, Helvetica, sans-serif;
+    color: #2B6DBE;
+    font-size: 1.75rem;
+    margin-top: 1rem;
+}
+main.main-content p.underline-title {
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+main.main-content ul li p {
+    margin-bottom: 0;
+}
+
+/* DUO Iframe */
+main.main-content section.duo-iframe-container {
+    display: flex;
+}
+
+/* Opt-In Acknowledgement and Logout */
+main.main-content form.opt-in-acknowledgement,
+main.main-content form.opt-in-logout {
+    margin-top: 1.5rem;
+}
+main.main-content form.opt-in-acknowledgement .form-group,
+main.main-content form.opt-in-logout .form-group {
+    border: 2px solid #033469;
+    padding: 1.875rem 1.25rem;
+    text-align: center;
+}
+main.main-content form.opt-in-acknowledgement .form-group legend {
+    border: 0;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+main.main-content form.opt-in-acknowledgement .form-group .custom-checkbox {
+    margin-bottom: 1.875rem;
+}
+main.main-content form.opt-in-acknowledgement .form-group .custom-checkbox input[type="checkbox"] {
+    top: 10px;
+    margin-left: -20px;
+}
+main.main-content form.opt-in-acknowledgement .form-group .custom-checkbox .custom-control-label {
+    padding-left: .6rem;
+    text-align: left;
+    padding-top: .1rem;
+}
+main.main-content form.opt-in-acknowledgement .form-group .custom-checkbox .custom-control-label::before {
+    border: solid 2px #000;
+    width: 1.313rem;
+    height: 1.313rem;
+}
+main.main-content form.opt-in-acknowledgement .form-group .custom-checkbox .custom-control-label::after {
+    left: -1.4rem;
+    width: 1.313rem;
+    height: 1.313rem;
+}
+main.main-content form.opt-in-acknowledgement .form-group .button-container,
+main.main-content form.opt-in-logout .form-group .button-container {
+    text-align: center;
+    width: 100%;
+}
+main.main-content form.opt-in-acknowledgement .form-group .button-container .btn,
+main.main-content form.opt-in-logout .form-group .button-container .btn {
+    font-family: "Mallory-Bold", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+    padding: 0.75rem 1.25rem;
+    max-width: 152px;
+    margin: 0 auto;
+}
+
+/* Error Validation Styles */
+main.main-content form.opt-in-acknowledgement .form-group.error-border {
+    border: 2px solid #BF0000;
+    background: #FBF0F0;
+}
+main.main-content form.opt-in-acknowledgement .error-wrapper ul.error-messages {
+    padding: 0;
+}
+main.main-content form.opt-in-acknowledgement .error-wrapper ul.error-messages li.error-message {
+    font-size: 0.875rem;
+    line-height: 1.2;
+    color: #BF0000;
+    list-style-type: none;
+}
+main.main-content form.opt-in-acknowledgement .error-wrapper ul.error-messages li.error-message::before {
+    content: "* ";
+}
+main.main-content form.opt-in-acknowledgement .error-wrapper ul.error-messages li.error-message a,
+main.main-content form.opt-in-acknowledgement .error-wrapper ul.error-messages li.error-message a:hover,
+main.main-content form.opt-in-acknowledgement .error-wrapper ul.error-messages li.error-message a:active,
+main.main-content form.opt-in-acknowledgement .error-wrapper ul.error-messages li.error-message a:visited {
+    color: #BF0000;
+}
+
+
+/*** FOOTER ***/
+footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+footer .footer-content {
+    display: flex;
+    flex-basis: 315px;
+    justify-content: center;
+    text-align: left;
+    margin-top: 2rem;
+}
+footer .footer-content img.footer-image {
+    align-self: flex-start;
+    margin-right: 1rem;
+    margin-top: .5rem;
+}
+footer .footer-content .footer_legal_copy {
+    font-size: 14px;
+}
+
+/*** PAGE SPECIFIC STYLES ***/
+/* MFA Everywhere Opt-In - Pg1 */
+#OptIn1 main.main-content section.steps-container .step-1 i {
+    border: solid 5px #033469;
+}
+#OptIn1 main.main-content section.steps-container .step-1 i, #OptIn1 main.main-content section.steps-container .step-1 div {
+    color: #033469;
+}
+
+/* MFA Everywhere Opt-In - Pg2 */
+#OptIn2 main.main-content section.steps-container .step-1 i, #OptIn2 main.main-content section.steps-container .step-2 i {
+    border: solid 5px #033469;
+}
+#OptIn2 main.main-content section.steps-container .step-1 i, #OptIn2 main.main-content section.steps-container .step-2 i,
+#OptIn2 main.main-content section.steps-container .step-1 div, #OptIn2 main.main-content section.steps-container .step-2 div {
+    color: #033469;
+}
+#OptIn2 main.main-content section.steps-container hr.hr-1 {
+    border-top: 5px solid #033469;
+}
+
+/* MFA Everywhere Opt-In - Pg3 */
+#OptIn3 main.main-content section.steps-container .step-1 i, #OptIn3 main.main-content section.steps-container .step-2 i {
+    border: 5px solid #033469;
+}
+#OptIn3 main.main-content section.steps-container .step-1 i, #OptIn3 main.main-content section.steps-container .step-2 i,
+#OptIn3 main.main-content section.steps-container .step-1 div, #OptIn3 main.main-content section.steps-container .step-2 div {
+    color: #033469;
+}
+#OptIn3 main.main-content section.steps-container hr.hr-1 {
+    border-top: 5px solid #033469;
+}
+
+/* MFA Everywhere Opt-In - Pg4 */
+#OptIn4 main.main-content section.steps-container .step-1 i, #OptIn4 main.main-content section.steps-container .step-2 i {
+    border: 5px solid #033469;
+}
+#OptIn4 main.main-content section.steps-container .step-1 i, #OptIn4 main.main-content section.steps-container .step-2 i,
+#OptIn4 main.main-content section.steps-container .step-1 div, #OptIn4 main.main-content section.steps-container .step-2 div {
+    color: #033469;
+}
+#OptIn4 main.main-content section.steps-container hr.hr-1 {
+    border-top: 5px solid #033469;
+}
+
+/* MFA Everywhere Opt-In - Pg5a */
+#OptInSuccess main.main-content section.steps-container .step-1 i, #OptInSuccess main.main-content section.steps-container .step-2 i, #OptInSuccess main.main-content section.steps-container .step-3 i {
+    border: 5px solid #033469;
+}
+#OptInSuccess main.main-content section.steps-container .step-1 i, #OptInSuccess main.main-content section.steps-container .step-2 i, #OptInSuccess main.main-content section.steps-container .step-3 i,
+#OptInSuccess main.main-content section.steps-container .step-1 div, #OptInSuccess main.main-content section.steps-container .step-2 div, #OptInSuccess main.main-content section.steps-container .step-3 div {
+    color: #033469;
+}
+#OptInSuccess main.main-content section.steps-container hr.hr-1,
+#OptInSuccess main.main-content section.steps-container hr.hr-2 {
+    border-top: 5px solid #033469;
+}
+/* MFA Everywhere Opt-In - Pg5b, Pg5c, Pg5d */
+#OptInFail main.main-content,
+#OptInHelp main.main-content {
+    margin-top: 3rem;
+}
+
+
+/*** RESPONSIVE STYLES ***/
+/* Extra large devices (large laptops and desktops, below 1200px) */
+/* @media only screen and (max-width: 1199px) {} */
+
+/* Large devices (laptops/desktops, below 992px) */
+@media only screen and (max-width: 991px) {
+    section.main-section {
+        margin: 4rem 2rem;
+    }
+    header h1 {
+        padding: 1rem 2.125rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+    main.main-content  {
+        margin-left: 2.125rem;
+        margin-right: 2.125rem;
+    }
+    main.main-content h2.form-header{
+        font-size: 1.5rem;
+    }
+    main.main-content section.steps-container .step img {
+        width: 40%;
+    }
+    main.main-content section.steps-container .step div {
+        font-size: 1rem;
+        min-width: 116px;
+    }
+    main.main-content form.opt-in-acknowledgement .form-group .custom-checkbox .custom-control-label {
+        padding: 3px;
+        padding-left: 5px;
+    }
+    main.main-content form.opt-in-acknowledgement .form-group .custom-checkbox .custom-control-label::before {
+        width: 1rem;
+        height: 1rem;
+    }
+    main.main-content form.opt-in-acknowledgement .form-group .custom-checkbox .custom-control-label::after {
+        left: -1.5rem;
+        width: 1rem;
+        height: 1rem;
+    }
+    main.main-content form.opt-in-acknowledgement .form-group .button-container .btn,
+    main.main-content form.opt-in-logout .form-group .button-container .btn {
+        font-size: 1rem;
+    }
+}
+
+/* Medium devices (landscape tablets, below 768px) */
+@media only screen and (max-width: 767px) {
+    body {
+        background: #fff;
+    }
+    section.main-section{
+        margin: 0;
+        background-position: bottom center;
+        padding: 4.5rem 0 5rem;
+        border: none;
+        -webkit-box-shadow: unset;
+        -moz-box-shadow: unset;
+        box-shadow: unset;
+    }
+    #BackToTop {
+        bottom: 80px; 
+    }
+    header h1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 2rem;
+        -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+    }
+    header nav.nav-bar ul.nav {
+        margin: 0;
+    } 
+    header nav.nav-bar ul.right-nav{
+        display: flex;
+        justify-content: initial;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        justify-content: center;
+        background: #033569;
+        border-top: 1px solid #033569;
+    }
+    header nav.nav-bar ul.right-nav {
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+    header nav.nav-bar ul.right-nav li.nav-item a.nav-link {
+        color: #fff;
+    }
+    header nav.nav-bar ul.right-nav li.nav-item a.nav-link:hover {
+        background: #286dc0;
+        text-decoration: none;
+    }
+    main.main-content {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+    main.main-content section.steps-container .step i {
+        font-size: 2rem;
+    }
+    main.main-content section.steps-container .step-1 i {
+        width: 74px;
+    }
+    main.main-content form.opt-in-acknowledgement .form-group .button-container .btn,
+    main.main-content form.opt-in-logout .form-group .button-container .btn {
+        font-size: .75rem;
+    }
+    main.main-content form.opt-in-acknowledgement .form-group .custom-checkbox {
+        margin: 0 auto 1.5rem;
+        width: 70%;
+    }
+    footer .footer-content {
+        flex-basis: 100%;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    footer .footer-content img.footer-image {
+        align-self: center;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: -20px;
+    }
+    footer .footer-content .footer_legal_copy {
+        flex-basis: 100%;
+    }
+}
+
+/* Custom Breakpoint for Header at 2 Lines */
+@media only screen and (max-width: 514px) {
+    section.main-section{
+        padding: 7rem 0 5rem;
+    }
+}
+
+/* iPhone 6/7/8 Plus, Pixel 2 XL, Pixel 2  */
+@media only screen and (max-width: 414px) {
+    section.main-section{
+        padding-bottom: 10rem;
+    }
+    #BackToTop {
+        bottom: 150px; 
+    }
+    header nav.nav-bar ul.right-nav {
+        margin: 0;
+        padding: .4rem;
+    }
+    header nav.nav-bar ul.right-nav li.nav-item {
+        display: block;
+        width: 100%;
+    }
+    header nav.nav-bar ul.right-nav li.nav-item a.nav-link {
+        text-align: center;
+        border-bottom: solid 1px #286dc0;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+        padding: 0.3rem 1.25rem;
+        font-size: .9rem;
+    }
+    header nav.nav-bar ul.right-nav li.nav-item:last-child a.nav-link {
+        border-bottom: none;
+    }
+    main.main-content section.steps-container hr{
+        max-width: 45px;
+    }
+}
+
+/* iPhone X, iPhone 6/7/8, Galaxy S5 */
+@media only screen and (max-width: 375px) {
+    main.main-content section.steps-container hr{
+        max-width: 25px;
+    }
+}
+
+/* Extra small devices (iPhone 5, 320px and below) */
+@media only screen and (max-width: 320px) {
+    main.main-content section.steps-container hr{
+        max-width: 5px;
+    }
+}
+
+

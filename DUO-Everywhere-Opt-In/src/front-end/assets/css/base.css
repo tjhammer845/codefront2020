@@ -1,0 +1,421 @@
+/*** GENERAL/LAYOUT ***/
+body {
+    font-family: "Mallory-Book", Verdana, Arial, Helvetica, sans-serif;
+    background: #9ab6d9 url("../../assets/images/yale-bg.jpg") top center repeat-y;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+section.main-section{
+    width: 100%;
+    max-width: 970px;
+    height: auto;
+    margin: 8rem auto;
+    background: #fff;
+    z-index: 3;
+}
+
+/* Back to Top Button */
+#BackToTop {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    /*bottom: 80px mobile */
+    right: 30px;
+    transition: background-color .3s,
+      opacity .3s, visibility .3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#BackToTop::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 10px;
+    color: #fff;
+    margin-right: 60px;
+    margin-left: -13px;
+}
+#BackToTop:hover {
+    cursor: pointer;
+    background: #033469;
+    border-color: #033469;
+}
+#BackToTop.show {
+    opacity: .7;
+    visibility: visible;
+}
+
+/*** HEADER ***/
+header h1 {
+    display: flex;
+    margin: 0;
+    padding: 1.5rem 3.125rem;
+    font-family: "YaleNew", Georgia, "Times New Roman", serif;
+    font-size: 2.4rem;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+    background-color: #033569;
+    border: 1px solid #033569;
+    color: #fff;
+    z-index: 4;
+}
+
+/* Rightside Links (Footer Links in Mobile) */
+header nav.nav-bar{
+    display: flex;
+    background-color: white;
+    border-bottom: 1px #707070 solid;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+header nav.nav-bar ul.nav {
+    margin: 0 2rem;
+}
+header nav.nav-bar ul.nav li.nav-item a.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+}
+header nav.nav-bar ul.nav li.nav-item a.nav-link:hover,
+header nav.nav-bar ul.nav li.nav-item a.nav-link:focus {
+    text-decoration: underline;
+}
+
+/*** MAIN CONTENT ***/
+/* Steps Indication */
+section.steps-container {
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 0;
+    max-width: 458px;
+}
+section.steps-container .step img {
+    width: 50%;
+}
+section.steps-container .step div {
+    font-family: "Mallory-Medium", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #727373;
+    min-width: 126px;
+    z-index: 1;
+}
+section.steps-container .step-1 {
+    margin-right: -30px;
+}
+section.steps-container .step-2 {
+    margin: 0 -30px;
+}
+section.steps-container .step-3 {
+    margin-left: -30px;
+}
+section.steps-container hr{
+    display: inline-block;
+    max-width: 112px;
+    width: 100%;
+    border-top: 5px solid #727373;
+}
+
+/* Page Copy and Acknowledgement */
+main.main-content, form.opt-in-acknowledgement, form.opt-in-logout {
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Page Copy */
+main.main-content h2.form-header{
+    font-family: "Mallory-Medium", Verdana, Arial, Helvetica, sans-serif;
+    color: #2B6DBE;
+    font-size: 1.75rem;
+    margin-top: 1rem;
+}
+main.main-content p.underline-title {
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+main.main-content ul li p {
+    margin-bottom: 0;
+}
+
+/* DUO Iframe */
+section.duo-iframe-container {
+    display: flex;
+}
+
+/* Opt-In Acknowledgement and Logout */
+form.opt-in-acknowledgement,
+form.opt-in-logout {
+    margin-top: 1.5rem;
+}
+form.opt-in-acknowledgement fieldset.form-group,
+form.opt-in-logout fieldset.form-group {
+    display: flex;
+    flex-basis: 100%;
+    border: 2px solid #033469;
+    padding: 1.875rem 1.25rem;
+    text-align: center;
+}
+form.opt-in-acknowledgement fieldset.form-group .custom-checkbox {
+    margin-bottom: 1.875rem;
+}
+form.opt-in-acknowledgement fieldset.form-group .custom-checkbox input[type="checkbox"] {
+    top: 10px;
+    margin-left: -20px;
+}
+form.opt-in-acknowledgement fieldset.form-group .custom-checkbox .custom-control-label {
+    padding-left: .6rem;
+    text-align: left;
+    padding-top: .1rem;
+}
+form.opt-in-acknowledgement fieldset.form-group .custom-checkbox .custom-control-label::before {
+    border: solid 2px #000;
+    width: 1.313rem;
+    height: 1.313rem;
+}
+form.opt-in-acknowledgement fieldset.form-group .custom-checkbox .custom-control-label::after {
+    left: -1.4rem;
+    width: 1.313rem;
+    height: 1.313rem;
+}
+form.opt-in-acknowledgement fieldset.form-group .button-container .btn,
+form.opt-in-logout fieldset.form-group .button-container .btn {
+    font-family: "Mallory-Bold", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+    padding: 0.75rem 1.25rem;
+}
+
+/*** FOOTER ***/
+footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+footer .footer-content {
+    display: flex;
+    flex-basis: 306px;
+    justify-content: center;
+    text-align: left;
+    margin-top: 2rem;
+}
+footer .footer-content img.footer-image {
+    align-self: flex-start;
+    margin-right: 1rem;
+    margin-top: .5rem;
+}
+footer .footer-content .footer_legal_copy {
+    font-size: 14px;
+}
+
+/*** PAGE SPECIFIC STYLES ***/
+/* MFA Everywhere Opt-In - Pg1 */
+#OptIn1 section.steps-container .step-1 div {
+    color: #033469;
+}
+
+/* MFA Everywhere Opt-In - Pg2 */
+#OptIn2 section.steps-container .step-1 div, #OptIn2 section.steps-container .step-2 div {
+    color: #033469;
+}
+#OptIn2 section.steps-container hr.hr-1 {
+    border-top: 5px solid #033469;
+}
+
+/* MFA Everywhere Opt-In - Pg3 */
+#OptIn3 section.steps-container .step-1 div, #OptIn3 section.steps-container .step-2 div {
+    color: #033469;
+}
+#OptIn3 section.steps-container hr.hr-1 {
+    border-top: 5px solid #033469;
+}
+
+/* MFA Everywhere Opt-In - Pg4 */
+#OptIn4 section.steps-container .step-1 div, #OptIn4 section.steps-container .step-2 div {
+    color: #033469;
+}
+#OptIn4 section.steps-container hr.hr-1 {
+    border-top: 5px solid #033469;
+}
+
+/* MFA Everywhere Opt-In - Pg5a */
+#OptIn5a section.steps-container .step-1 div, #OptIn5a section.steps-container .step-2 div, #OptIn5a section.steps-container .step-3 div {
+    color: #033469;
+}
+#OptIn5a section.steps-container hr.hr-1,
+#OptIn5a section.steps-container hr.hr-2 {
+    border-top: 5px solid #033469;
+}
+/* MFA Everywhere Opt-In - Pg5b, Pg5c, Pg5d */
+#OptIn5b section.main-section main.main-content, 
+#OptIn5c section.main-section main.main-content, 
+#OptIn5d section.main-section main.main-content {
+    margin-top: 3rem;
+}
+
+
+/*** RESPONSIVE STYLES ***/
+/* Extra large devices (large laptops and desktops, below 1200px) */
+/* @media only screen and (max-width: 1199px) {} */
+
+/* Large devices (laptops/desktops, below 992px) */
+@media only screen and (max-width: 991px) {
+    section.main-section {
+        margin: 4rem 2rem;
+    }
+    header h1 {
+        padding: 1rem 2.125rem;
+        font-size: 2rem;
+    }
+    main.main-content, form.opt-in-acknowledgement, form.opt-in-logout  {
+        margin-left: 2.125rem;
+        margin-right: 2.125rem;
+    }
+    main.main-content h2.form-header{
+        font-size: 1.5rem;
+    }
+    section.steps-container .step img {
+        width: 40%;
+    }
+    section.steps-container .step div {
+        font-size: 1rem;
+        min-width: 116px;
+    }
+    form.opt-in-acknowledgement fieldset.form-group .custom-checkbox .custom-control-label {
+        padding: 3px;
+        padding-left: 5px;
+    }
+    form.opt-in-acknowledgement fieldset.form-group .custom-checkbox .custom-control-label::before {
+        width: 1rem;
+        height: 1rem;
+    }
+    form.opt-in-acknowledgement fieldset.form-group .custom-checkbox .custom-control-label::after {
+        left: -1.5rem;
+        width: 1rem;
+        height: 1rem;
+    }
+    form.opt-in-acknowledgement fieldset.form-group .button-container .btn,
+    form.opt-in-logout fieldset.form-group .button-container .btn {
+        font-size: 1rem;
+    }
+}
+
+/* Medium devices (landscape tablets, below 768px) */
+@media only screen and (max-width: 767px) {
+    body {
+        background: #fff;
+    }
+    section.main-section{
+        margin: 0;
+        background-position: bottom center;
+        padding: 6rem 0 5rem;
+    }
+    header h1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 2rem;
+        text-align: center;
+        -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+    }
+    header nav.nav-bar{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        justify-content: center;
+        background: #033569;
+        border-top: 1px solid #033569;
+    }
+    header nav.nav-bar ul.nav {
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+    header nav.nav-bar ul.nav li.nav-item a.nav-link {
+        color: #fff;
+    }
+    header nav.nav-bar ul.nav li.nav-item a.nav-link:hover {
+        background: #286dc0;
+        text-decoration: none;
+    }
+    main.main-content, form.opt-in-acknowledgement, form.opt-in-logout  {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+    form.opt-in-acknowledgement fieldset.form-group .button-container .btn,
+    form.opt-in-logout fieldset.form-group .button-container .btn {
+        font-size: .75rem;
+    }
+    form.opt-in-acknowledgement fieldset.form-group .custom-checkbox {
+        margin: 0 auto 1.5rem;
+        width: 70%;
+    }
+    footer .footer-content {
+        flex-basis: 100%;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    footer .footer-content img.footer-image {
+        align-self: center;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: -20px;
+    }
+    footer .footer-content .footer_legal_copy {
+        flex-basis: 100%;
+    }
+}
+
+/* Custom Breakpoint for One Column Footer Navigation */
+@media only screen and (max-width: 410px) {
+    section.main-section{
+        padding-bottom: 10rem;
+    }
+    header nav.nav-bar ul.nav {
+        margin: 0;
+        padding: .4rem;
+    }
+    header nav.nav-bar ul.nav li.nav-item {
+        display: block;
+        width: 100%;
+    }
+    header nav.nav-bar ul.nav li.nav-item a.nav-link {
+        text-align: center;
+        border-bottom: solid 1px #286dc0;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+        padding: 0.3rem 1.25rem;
+        font-size: .9rem;
+    }
+    header nav.nav-bar ul.nav li.nav-item:last-child a.nav-link {
+        border-bottom: none;
+    }
+}
+
+/* Extra small devices (phones, 320px and above) */
+@media only screen and (min-width: 320px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+

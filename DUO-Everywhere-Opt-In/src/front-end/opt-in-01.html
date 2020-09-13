@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MFA Everywhere opt-in</title>
+    
+    <!-- Yale Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
+
+    <!-- Yale Styles -->
+    <link rel="stylesheet" href="assets/css/yale-ui.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+
+</head>
+<body id="OptIn1">
+    <a class="btn btn-primary" id="BackToTop"></a>
+    <section class="main-section">
+        <header>
+            <h1>MFA Everywhere opt-in</h1>
+            <nav class="nav-bar" aria-label="right-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://usability.yale.edu/web-accessibility/accessibility-yale" title="Accessibility" aria-current="page">Accessibility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://secure.its.yale.edu/cas/logout" title="CAS Logout" aria-current="page">CAS Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="Help" aria-current="page">Help</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="steps-container">
+            <div class="step step-1">
+                <img src="assets/images/enroll-active.svg" title="Step 1: Enroll" alt="Step 1: Enroll" />
+                <div title="Step 1: Enroll">Enroll</div>
+            </div>
+            <hr class="hr-1">
+            <div class="step step-2">
+                <img src="assets/images/duo.svg" title="Step 2: DUO Setup" alt="Step 2: DUO Setup" />
+                <div title="Step 2: DUO Setup">DUO Setup</div>
+            </div>
+            <hr class="hr-2">
+            <div class="step step-3">
+                <img src="assets/images/confirm.svg" title="Step 3: Confirm" alt="Step 3: Confirm" />
+                <div title="Step 3: Confirm">Confirm</div>
+            </div>
+        </section>
+        <main class="main-content">
+            <h2 class="form-header">What should I expect when I enroll?</h2>
+            <p>When you enroll, you will be required to enter your password and to DUO authenticate upon the first use of MS Outlook, other Office 365 applications, and CAS.  This will happen on your computer when you are on campus, and also on any mobile device.</p>
+            <h2 class="form-header">When will I get prompted?</h2>
+            <p>This depends on how you work.  You will be prompted once per browser, per device for MS Office 365 (Outlook, OneDrive, Teams, Skype for Business) and CAS logins.  There will be a 90-day checkbox in the DUO window that will allow you to extend the memory period for that session and minimize the number of prompts.  You can expect to be prompted more than once within a 90-day window.</p>
+            <p>When you enroll:</p>
+                <ul>
+                    <li><p>CAS will prompt for DUO authentication, one per browser per device, almost immediately.</p></li>
+                    <li><p>O365 will prompt for DUO authentication, one per app per device, within 3-6 hours of enrollment.</p></li>
+                </ul>
+            <p>See <a href="#" title="MFA Everywhere behavior">MFA Everywhere behavior</a> for more information about MFA everywhere behavior.</p>
+            <h2 class="form-header">Why does this need to happen?</h2>
+            <p>In recent years, Yale has experienced a substantial increase in compromised NetID’s. The primary problem is email phishing, which has become increasingly common. Scammers are increasingly sophisticated at gaining access to passwords, which allow them to access our systems and data. This puts our intellectual property, faculty research data, and personal information at heightened risk. DUO Everywhere will significantly reduce Yale’s exposure.</p>
+            <h2 class="form-header">What do I do if I need help?</h2>
+            <p>For questions, please contact the ITS Help Desk at <a title="Email the Yale ITS Help Desk" href="mailto:helpme.yale.edu">helpme.yale.edu</a> or 203-432-9000.</p>
+        </main>
+
+        <form name="Opt In Acknowledgement" class="opt-in-acknowledgement">
+            <fieldset class="form-group">
+                    <div class="button-container">
+                        <button type="submit" title="Continue" name="Continue" class="btn btn-yale font-weight-bold mr-12">Continue</a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <footer>
+            <div class="footer-content">
+                <img class="footer-image" src="assets/images/yale-logo-sprite.svg" title="Yale University" alt="Yale University" />
+                <div class="footer_legal_copy">Copyright &copy; 2020 Yale University<br>
+                    All Rights Reserved</div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Imported Scripts -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="assets/js/back-to-top.min.js"></script>
+    <script src="assets/js/yale-ui-scripts.js"></script>
+    
+</body>
+</html>

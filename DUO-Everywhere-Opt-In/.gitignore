@@ -1,0 +1,8 @@
+/target/
+/deco.json
+/deco-DEV.json
+/deco-TEST.json
+/deco-PROD.json
+/.settings/
+/.metadata/
+/src/main/resources/application-local.properties
